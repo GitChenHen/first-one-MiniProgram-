@@ -1,0 +1,24 @@
+<!--pages/note/list.wxml-->
+<view class="page">
+  <block wx:for="{{notes}}" wx:key="{{ item.uuid }}">
+    <view class="itemRoot">
+      <view class="note-card" data-uuid="{{item._id}}" bindtap="handleNoteTap">
+        <view wx:if="{{!!item.title}}" class="note-card__title">
+          {{item.title}}
+        </view>
+        <view class="note-card__content">
+          {{item.content||'新建笔记'}}
+        </view>
+        <view wx:if="{{!!item.time}}" class="note-card__content">
+          发表时间：{{item.time}}
+        </view>
+      </view>
+      <text class="shanchu" data-uuid="{{ item._id }}" bindtap="handleNoteLongTap">删除</text>
+    </view>
+  </block>
+  <view class="ripple bounceIn" wx:if="{{ !notes.length }}">
+    <tips-info text="还没有笔记哦，快去新建一个吧！">
+    </tips-info>
+  </view>
+  <view class="note-add" bindtap="handleAddNote">+</view>
+</view>

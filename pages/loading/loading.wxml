@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/assets/img/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+        <image class="wave" src="/assets/img/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/assets/img/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <image class="smalltitle" src="/assets/img/loading.png"></image>
+        <view>
+          <view class="confirm-btn" bindtap='goSign' wx:if="{{userInfo.nickName}}">
+            <text>立即进入</text>
+          </view>
+          <button class="confirm-btn" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" wx:else>点击授权</button>
+        </view>
+        <text class="copyright">© 2019 打卡小程序 </text>
+      </view>
+    </view>
+  </block>
+</view>

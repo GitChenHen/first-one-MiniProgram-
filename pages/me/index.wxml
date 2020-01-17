@@ -1,0 +1,23 @@
+<!--pages/me/index.wxml-->
+<view class="page">
+  <view class="user-card">
+    <image class="user-card__bg" src="../../assets/img/me-bg.png" mode="aspectFill"></image>
+    <view class="user-card__info" wx:if="{{userInfo&&userInfo.nickName}}">
+      <image class="user-card__head" src="{{ userInfo.avatarUrl }}"></image>
+      <text class="user-card__name">{{userInfo.nickName}}</text>
+    </view>
+    <button wx:else open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">授权登陆</button>
+  </view>
+  <!-- 我的笔记 -->
+  <view class='line_5px' />
+  <view class='my_item' bindtap="linkToNotes">
+    <text class='txt'>我的笔记</text>
+    <text class='tips'>{{ notesCount }}个</text>
+    <view class='right_arrow' />
+  </view>
+  <!-- 问题反馈 -->
+  <view class='my_item' >
+   <button class='button' open-type="feedback">反馈建议</button>
+    <view class='right_arrow' />
+  </view>
+</view>

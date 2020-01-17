@@ -1,0 +1,55 @@
+<!--pages/note/create.wxml-->
+<view class="page">
+  <view class="field-set" style="background: white;">
+    <view class="field-item">
+      <label class="field-label">标题</label>
+      <label class="field-control">
+        <input class="field-input w-full" value="{{ note.title }}" placeholder="笔记标题..." bindinput="handleTitleChange" auto-focus>
+        </input>
+      </label>
+    </view>
+    <!-- 内容 -->
+    <view class="field-item">
+      <label class="field-label">内容</label>
+      <label class="field-control">
+        <textarea class="content" value="{{ note.content }}" placeholder="笔记内容..." bindinput="handleContentChange">
+        </textarea>
+      </label>
+    </view>
+    <!-- 图片 -->
+    <view class="image-list">
+      <!-- 显示图片 -->
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="image-wrap">
+          <image class="image" src="{{item}}" mode="aspectFill" bind:tap="onPreviewImage" data-imgsrc="{{item}}"></image>
+          <image class="close" src="../../assets/img/close.png" bind:tap="onDelImage" data-index="{{index}}"></image>
+        </view>
+      </block>
+      <!-- 选择图片 -->
+      <view class="image-wrap selectphoto" hidden="{{!selectPhoto}}" bind:tap="onChooseImage">
+        <image class="photoAdd" src="../../assets/img/photo.png"></image>
+      </view>
+    </view>
+    <!-- <view wx:if="{{!!note.createdAt}}" class="time">发表时间：{{ note.time }}</view> -->
+  </view>
+  <!-- 点赞操作 -->
+  <image bindtap="dianzan" class="dianzanImg" src="{{dianzanOk ? '../../assets/img/dianzan-yes.png' : '../../assets/img/dianzan-no.png'}}"></image>
+  <!-- 点赞和分享 -->
+  <view class="ctrl">
+    <view class="ctrl-item" bind:tap="onComment">
+      <i class="iconfont icon-pinglun icon"></i>
+      <text>{{dianzanNum}}人点赞</text>
+    </view>
+    <view class="ctrl-item share">
+      <button open-type="share" data-blogid="{{blogId}}" data-blog="{{blog}}" class="share-btn" hover-class="share-hover">
+        <text>分享</text>
+      </button>
+    </view>
+  </view>
+  <view class="fixed-bottom">
+    <view class="button-group">
+      <button class="button" bindtap="handleCancelTap">取消</button>
+      <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+    </view>
+  </view>
+</view>

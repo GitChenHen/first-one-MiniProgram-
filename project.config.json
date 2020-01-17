@@ -1,0 +1,86 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wx1f8aeff1a0470b0e",
+	"projectname": "%E4%BB%BB%E5%8A%A1%E8%A7%84%E5%88%92",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "page",
+					"pathName": "pages/todo/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/todo/index",
+					"pathName": "pages/todo/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/me/index",
+					"pathName": "pages/me/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/biji/biji",
+					"pathName": "pages/biji/biji",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/note/create",
+					"pathName": "pages/note/create",
+					"query": "uuid=72527ac65dfddc98058f4b1f0f813616",
+					"scene": null
+				}
+			]
+		}
+	}
+}

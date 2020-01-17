@@ -1,0 +1,52 @@
+.note-add {
+  position: fixed;
+  left: 50%;
+  bottom: 60rpx;
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: -45rpx;
+  border-radius: 50%;
+  font-size: 60rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  color: #444;
+}
+
+.itemRoot {
+  position: relative;
+}
+
+/* components/note-card/note-card.wxss */
+
+.note-card {
+  background-color: #fff;
+  border-radius: 8rpx;
+  margin: 30rpx;
+  padding: 30rpx;
+  box-shadow: 3rpx 3rpx 15rpx 0 rgba(0, 0, 0, 0.1);
+  color: #9198ab;
+  font-size: 32rpx;
+}
+
+.note-card__title {
+  display: block;
+  border-bottom: 1rpx dashed #ccc;
+  padding: 0 20rpx 20rpx 0;
+}
+
+.note-card__content {
+  display: block;
+  padding: 20rpx 0 0 0;
+  font-size: 28rpx;
+}
+
+.shanchu {
+  position: absolute;
+  font-size: 35rpx;
+  right: 60rpx;
+  top: 20rpx;
+  padding: 5rpx 15rpx;
+  background: gainsboro;
+}

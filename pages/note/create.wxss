@@ -1,0 +1,120 @@
+/* pages/note/create.wxss */
+
+.field-content {
+  border: 1px solid red;
+}
+
+.dianzanImg {
+  margin-left: 325rpx;
+  margin-top: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* 点赞和分享 */
+
+.ctrl {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 100rpx;
+}
+
+.ctrl-item {
+  flex: 1;
+  text-align: center;
+  color: rgba(40, 47, 60, 0.8);
+  font-size: 26rpx;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctrl-item .icon {
+  margin-right: 12rpx;
+  font-size: 32rpx;
+}
+
+.ctrl-item text {
+  font-size: 32rpx;
+}
+
+.share-btn {
+  background-color: #fff;
+  color: rgba(40, 47, 60, 0.8);
+  padding: 0;
+  height: 100%;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-btn::after {
+  display: none;
+}
+
+.content {
+  height: 100rpx;
+}
+
+.time {
+  color: gray;
+  font-size: 35rpx;
+  text-align: right;
+  margin-right: 30rpx;
+}
+
+/* 发布图片 */
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.image-wrap {
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.selectphoto {
+  border: 2rpx dashed #cbd1d7;
+  position: relative;
+}
+
+.photoAdd {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.icon-jiahao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #cbd1d7;
+  font-size: 60rpx;
+}
